@@ -68,3 +68,5 @@ Thumbs.db
 
 # Project specific
 *.log
+test.py
+app.db

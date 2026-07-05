@@ -12,26 +12,26 @@ _DEFAULT_QUEUE_MAX_SIZE = 10000                 # 默认队列最大容量
 
 _CREATE_TABLE_SQL = """
 CREATE TABLE IF NOT EXISTS log_record (
-    id          SERIAL PRIMARY KEY,
-    sys_name    TEXT    NOT NULL,
-    level       TEXT    NOT NULL,
-    cst_time    TEXT    NOT NULL,
-    unix_ms    BIGINT  NOT NULL,
-    file_name   TEXT    NOT NULL DEFAULT '',
-    method_name TEXT    NOT NULL DEFAULT '',
-    message     TEXT    NOT NULL
+    log_id           SERIAL PRIMARY KEY,
+    log_sys_name     TEXT    NOT NULL,
+    log_level        TEXT    NOT NULL,
+    log_cst_time     TEXT    NOT NULL,
+    log_unix_ms     BIGINT  NOT NULL,
+    log_file_name    TEXT    NOT NULL DEFAULT '',
+    log_method_name  TEXT    NOT NULL DEFAULT '',
+    log_message      TEXT    NOT NULL
 )
 """
 
 _CREATE_INDEX_SQLS = [
-    "CREATE INDEX IF NOT EXISTS idx_log_record_sys_name ON log_record (sys_name)",
-    "CREATE INDEX IF NOT EXISTS idx_log_record_level ON log_record (level)",
-    "CREATE INDEX IF NOT EXISTS idx_log_record_cst_time ON log_record (cst_time)",
-    "CREATE INDEX IF NOT EXISTS idx_log_record_unix_ms ON log_record (unix_ms)",
+    "CREATE INDEX IF NOT EXISTS idx_log_record_sys_name ON log_record (log_sys_name)",
+    "CREATE INDEX IF NOT EXISTS idx_log_record_level ON log_record (log_level)",
+    "CREATE INDEX IF NOT EXISTS idx_log_record_cst_time ON log_record (log_cst_time)",
+    "CREATE INDEX IF NOT EXISTS idx_log_record_unix_ms ON log_record (log_unix_ms)",
 ]
 
 _INSERT_SQL = """
-INSERT INTO log_record (sys_name, level, cst_time, unix_ms, file_name, method_name, message)
+INSERT INTO log_record (log_sys_name, log_level, log_cst_time, log_unix_ms, log_file_name, log_method_name, log_message)
 VALUES ($1, $2, $3, $4, $5, $6, $7)
 """
 

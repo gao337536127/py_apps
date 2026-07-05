@@ -13,20 +13,26 @@ _DEFAULT_QUEUE_MAX_SIZE = 10000                 # 默认队列最大容量
 
 _CREATE_TABLE_SQL = """
 CREATE TABLE IF NOT EXISTS log_record (
-    id          INTEGER PRIMARY KEY AUTOINCREMENT,
-    level       TEXT    NOT NULL,
-    cst_time    TEXT    NOT NULL,
-    unix_ms    INTEGER NOT NULL,
-    file_name   TEXT    NOT NULL DEFAULT '',
-    method_name TEXT    NOT NULL DEFAULT '',
-    message     TEXT    NOT NULL
+    log_id           INTEGER PRIMARY KEY AUTOINCREMENT,
+    log_level        TEXT    NOT NULL,
+    log_cst_time     TEXT    NOT NULL,
+    log_unix_ms     INTEGER NOT NULL,
+    log_file_name    TEXT    NOT NULL DEFAULT '',
+    log_method_name  TEXT    NOT NULL DEFAULT '',
+    log_message      TEXT    NOT NULL
 )
 """
 
 _INSERT_SQL = """
-INSERT INTO log_record (level, cst_time, unix_ms, file_name, method_name, message)
+INSERT INTO log_record (log_level, log_cst_time, log_unix_ms, log_file_name, log_method_name, log_message)
 VALUES (?, ?, ?, ?, ?, ?)
 """
+
+_CREATE_INDEX_SQLS = [
+    "CREATE INDEX IF NOT EXISTS idx_log_record_level ON log_record (log_level)",
+    "CREATE INDEX IF NOT EXISTS idx_log_record_cst_time ON log_record (log_cst_time)",
+    "CREATE INDEX IF NOT EXISTS idx_log_record_unix_ms ON log_record (log_unix_ms)",
+]
 
 
 class AsyncSqliteLogger(AsyncAbstractLogger):
@@ -66,6 +72,8 @@ class AsyncSqliteLogger(AsyncAbstractLogger):
         conn = self._conn
         assert conn is not None
         await conn.execute(_CREATE_TABLE_SQL)
+        for index_sql in _CREATE_INDEX_SQLS:
+            await conn.execute(index_sql)
         await conn.commit()
         if self._consumer_task is None:
             self._consumer_task = asyncio.create_task(self._consume_loop())

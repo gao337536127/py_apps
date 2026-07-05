@@ -151,14 +151,19 @@ class AsyncFileLogger(AsyncAbstractLogger):
     def _format_message(self, level: LogLevel, message: str, file_name: str, method_name: str) -> str:
         """
         格式化日志消息
-        格式：等级 CST时间(毫秒) 毫秒级unix时间戳 文件名:方法名 日志文本
-        示例：INFO 2026-07-04 18:31:04.643 1783161064643 dao.py:query error direct
+        格式：[等级] [CST时间(毫秒)] [毫秒级unix时间戳] [文件名:方法名] 日志文本
+        等级固定8字符，时间固定23字符，时间戳固定13字符
+        示例：[INFO    ] [2026-07-04 18:31:04.643] [1783161064643] [dao.py:query] error direct
         """
         now = datetime.now(_CST)
         cst_time = now.strftime("%Y-%m-%d %H:%M:%S.%f")[:-3]
         unix_ms = int(now.timestamp() * 1000)
         source = f"{file_name}:{method_name}" if file_name and method_name else file_name or method_name
-        return f"{level.name} {cst_time} {unix_ms} {source} {message}\n"
+        level_str = f"[{level.name:<8}]"
+        time_str = f"[{cst_time:<23}]"
+        unix_str = f"[{unix_ms:<13}]"
+        source_str = f"[{source}]"
+        return f"{level_str} {time_str} {unix_str} {source_str} {message}\n"
 
     async def _log(self, level: LogLevel, message: str, file_name: str, method_name: str, *args: Any, **kwargs: Any) -> None:
         """将格式化后的日志消息放入队列，由后台消费者异步写入文件"""
