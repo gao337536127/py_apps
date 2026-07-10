@@ -1,0 +1,238 @@
+{
+  "rootHash": "dfdfd6709a1d5d00edd525887997303c81125c99b822972024733b6a56b040ac",
+  "timestamp": 1783676360539,
+  "fileCount": 13,
+  "files": [
+    {
+      "path": "__init__.py",
+      "hash": "0e5751c026e543b2e8ab2eb06099daa1d1e5df47778f7787faab45cdf12fe3a8",
+      "size": 0,
+      "modified": 1783325422625.172
+    },
+    {
+      "path": "utils\\configuration.py",
+      "hash": "0ea26dd221910c1cc214db13591da47ef5d1cd3d86a924ecbb87a208e0fe801e",
+      "size": 79,
+      "modified": 1783325422626.1719
+    },
+    {
+      "path": "utils\\__init__.py",
+      "hash": "0e5751c026e543b2e8ab2eb06099daa1d1e5df47778f7787faab45cdf12fe3a8",
+      "size": 0,
+      "modified": 1783325422626.1719
+    },
+    {
+      "path": "main\\__init__.py",
+      "hash": "0e5751c026e543b2e8ab2eb06099daa1d1e5df47778f7787faab45cdf12fe3a8",
+      "size": 0,
+      "modified": 1783325422626.1719
+    },
+    {
+      "path": "main\\__main__.py",
+      "hash": "019debd232306faa2e847a4cb3e08b6d02a772379e78b9e4e380d4ccc3ba8a26",
+      "size": 950,
+      "modified": 1783325422626.1719
+    },
+    {
+      "path": "app_logger\\file_logger.py",
+      "hash": "e0a17ab58d248d98b2b9931bb2604716df4d56403237c411206394c36799fbd2",
+      "size": 8092,
+      "modified": 1783676341478.4458
+    },
+    {
+      "path": "app_logger\\interfaces.py",
+      "hash": "c25a29aa06bb3ad101249fde7070a5b6aa4a0dbe50561c099ad0b0020deadaf3",
+      "size": 2888,
+      "modified": 1783325422625.172
+    },
+    {
+      "path": "app_logger\\log_level.py",
+      "hash": "62ee983fe876275af4e3abe58ae79f1a6667cdba3fb8d8710ed22f2a274afbd9",
+      "size": 418,
+      "modified": 1783325422626.1719
+    },
+    {
+      "path": "app_logger\\postgres_logger.py",
+      "hash": "d8b2e585ff779c0facf2d7374bb4286f36339a79a7d1a842c1198a6fe7d0e40e",
+      "size": 5498,
+      "modified": 1783676341479.4458
+    },
+    {
+      "path": "app_logger\\registry.py",
+      "hash": "855564ad3b1f407ec0eefe1ecf1b10e78fdd7f6794cf73f34803ce841e1cca53",
+      "size": 4425,
+      "modified": 1783325422626.1719
+    },
+    {
+      "path": "app_logger\\sqlite_logger.py",
+      "hash": "cf522f0aa70e55acdb5392477c55b084a5ee58fea2cce9dd35d12bff4d4b6a3a",
+      "size": 5284,
+      "modified": 1783676341481.9534
+    },
+    {
+      "path": "app_logger\\_executor.py",
+      "hash": "feb949d3fd2aa4b27f8f40dc359c8374153c5edd74395992675643b272180fa9",
+      "size": 247,
+      "modified": 1783325422625.172
+    },
+    {
+      "path": "app_logger\\__init__.py",
+      "hash": "16b02f4595cc10c8552492b05959f99f2fc5f22410b978b1be6b07e458af12f2",
+      "size": 454,
+      "modified": 1783676341476.4536
+    }
+  ],
+  "tree": {
+    "hash": "dfdfd6709a1d5d00edd525887997303c81125c99b822972024733b6a56b040ac",
+    "left": {
+      "hash": "a25da1f8e90ead60f118ef5fe478eb1b2cae1b4ca51e080fd1c59a87acbee26f",
+      "left": {
+        "hash": "c6c30e2e5a812c2a3fe058a4e5a0c213c12b6d6dfc108401db2f5c42babe6d89",
+        "left": {
+          "hash": "ce9e836bb6d1e942e318a705addd0facb8d2bf20001b827810dbc0fd5869251d",
+          "left": {
+            "hash": "0e5751c026e543b2e8ab2eb06099daa1d1e5df47778f7787faab45cdf12fe3a8",
+            "file": {
+              "path": "__init__.py",
+              "hash": "0e5751c026e543b2e8ab2eb06099daa1d1e5df47778f7787faab45cdf12fe3a8",
+              "size": 0,
+              "modified": 1783325422625.172
+            }
+          },
+          "right": {
+            "hash": "16b02f4595cc10c8552492b05959f99f2fc5f22410b978b1be6b07e458af12f2",
+            "file": {
+              "path": "app_logger\\__init__.py",
+              "hash": "16b02f4595cc10c8552492b05959f99f2fc5f22410b978b1be6b07e458af12f2",
+              "size": 454,
+              "modified": 1783676341476.4536
+            }
+          }
+        },
+        "right": {
+          "hash": "6fc1fae58097b2430ed73c332d79c07c15763392b87bc624e1647048ba2052b3",
+          "left": {
+            "hash": "feb949d3fd2aa4b27f8f40dc359c8374153c5edd74395992675643b272180fa9",
+            "file": {
+              "path": "app_logger\\_executor.py",
+              "hash": "feb949d3fd2aa4b27f8f40dc359c8374153c5edd74395992675643b272180fa9",
+              "size": 247,
+              "modified": 1783325422625.172
+            }
+          },
+          "right": {
+            "hash": "e0a17ab58d248d98b2b9931bb2604716df4d56403237c411206394c36799fbd2",
+            "file": {
+              "path": "app_logger\\file_logger.py",
+              "hash": "e0a17ab58d248d98b2b9931bb2604716df4d56403237c411206394c36799fbd2",
+              "size": 8092,
+              "modified": 1783676341478.4458
+            }
+          }
+        }
+      },
+      "right": {
+        "hash": "88be3e1373489ba81a5861f465f15352503ca96ab5f5360ddd31975fb3909ae6",
+        "left": {
+          "hash": "8f07b683b6f9153debe98de13bbf03c4d7d5ae689b6c2d5c2bea1ea7a6ad89eb",
+          "left": {
+            "hash": "c25a29aa06bb3ad101249fde7070a5b6aa4a0dbe50561c099ad0b0020deadaf3",
+            "file": {
+              "path": "app_logger\\interfaces.py",
+              "hash": "c25a29aa06bb3ad101249fde7070a5b6aa4a0dbe50561c099ad0b0020deadaf3",
+              "size": 2888,
+              "modified": 1783325422625.172
+            }
+          },
+          "right": {
+            "hash": "62ee983fe876275af4e3abe58ae79f1a6667cdba3fb8d8710ed22f2a274afbd9",
+            "file": {
+              "path": "app_logger\\log_level.py",
+              "hash": "62ee983fe876275af4e3abe58ae79f1a6667cdba3fb8d8710ed22f2a274afbd9",
+              "size": 418,
+              "modified": 1783325422626.1719
+            }
+          }
+        },
+        "right": {
+          "hash": "1c6049e86c4c5b80302ad957fa0111f042792e24001be51ec937bb0f350caa03",
+          "left": {
+            "hash": "d8b2e585ff779c0facf2d7374bb4286f36339a79a7d1a842c1198a6fe7d0e40e",
+            "file": {
+              "path": "app_logger\\postgres_logger.py",
+              "hash": "d8b2e585ff779c0facf2d7374bb4286f36339a79a7d1a842c1198a6fe7d0e40e",
+              "size": 5498,
+              "modified": 1783676341479.4458
+            }
+          },
+          "right": {
+            "hash": "855564ad3b1f407ec0eefe1ecf1b10e78fdd7f6794cf73f34803ce841e1cca53",
+            "file": {
+              "path": "app_logger\\registry.py",
+              "hash": "855564ad3b1f407ec0eefe1ecf1b10e78fdd7f6794cf73f34803ce841e1cca53",
+              "size": 4425,
+              "modified": 1783325422626.1719
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "hash": "4b2bb6914780fd9aed4d212d6f1f868e0922d0fab7cc5d9b3b6e291af2819ed8",
+      "left": {
+        "hash": "87d21229c885d5d9ac26b548933ca9a1c909e79d832ef78d4823659216ef1f9b",
+        "left": {
+          "hash": "814cd376a370453e465af835db9a062df9c99ba655d5edc9092a43eed72c6a1b",
+          "left": {
+            "hash": "cf522f0aa70e55acdb5392477c55b084a5ee58fea2cce9dd35d12bff4d4b6a3a",
+            "file": {
+              "path": "app_logger\\sqlite_logger.py",
+              "hash": "cf522f0aa70e55acdb5392477c55b084a5ee58fea2cce9dd35d12bff4d4b6a3a",
+              "size": 5284,
+              "modified": 1783676341481.9534
+            }
+          },
+          "right": {
+            "hash": "0e5751c026e543b2e8ab2eb06099daa1d1e5df47778f7787faab45cdf12fe3a8",
+            "file": {
+              "path": "main\\__init__.py",
+              "hash": "0e5751c026e543b2e8ab2eb06099daa1d1e5df47778f7787faab45cdf12fe3a8",
+              "size": 0,
+              "modified": 1783325422626.1719
+            }
+          }
+        },
+        "right": {
+          "hash": "9b54f41749cd2ac275a74c5fa392eef1c1a463cfe880c66cac19538d9a0c7680",
+          "left": {
+            "hash": "019debd232306faa2e847a4cb3e08b6d02a772379e78b9e4e380d4ccc3ba8a26",
+            "file": {
+              "path": "main\\__main__.py",
+              "hash": "019debd232306faa2e847a4cb3e08b6d02a772379e78b9e4e380d4ccc3ba8a26",
+              "size": 950,
+              "modified": 1783325422626.1719
+            }
+          },
+          "right": {
+            "hash": "0e5751c026e543b2e8ab2eb06099daa1d1e5df47778f7787faab45cdf12fe3a8",
+            "file": {
+              "path": "utils\\__init__.py",
+              "hash": "0e5751c026e543b2e8ab2eb06099daa1d1e5df47778f7787faab45cdf12fe3a8",
+              "size": 0,
+              "modified": 1783325422626.1719
+            }
+          }
+        }
+      },
+      "right": {
+        "hash": "0ea26dd221910c1cc214db13591da47ef5d1cd3d86a924ecbb87a208e0fe801e",
+        "file": {
+          "path": "utils\\configuration.py",
+          "hash": "0ea26dd221910c1cc214db13591da47ef5d1cd3d86a924ecbb87a208e0fe801e",
+          "size": 79,
+          "modified": 1783325422626.1719
+        }
+      }
+    }
+  }
+}
